@@ -1,28 +1,26 @@
-print("Bem vindo a historias.com, seu site para criar historias curtas.")
-print("PS: As historias podem sair com erros, entao, forneca um input claro.")
+def criar_historia():
+    print("\nBem-vindo ao Historias.com, seu site para criar histórias curtas!")
+    print("PS: Forneça um input claro para uma melhor experiência.\n")
 
-prota = input("Primeiro, diga o nome do seu protagonista(Ex: Ana): ")
+    protagonista = input("Nome do protagonista: ")
+    local = input("Local da história: ")
+    acao_inicial = input("O que o protagonista estava fazendo? ")
+    evento = input("Evento inesperado que ocorreu: ")
+    reacao = input("Reação do protagonista: ")
+    desfecho = input("O que aconteceu depois? ")
+    final_feliz = input("Final feliz: ")
+    
+    historia = f"""
+    ---------------------------------------------------------
+    Aqui está sua história:
+    
+    Era uma vez, em {local}, uma pessoa chamada {protagonista}.
+    Certo dia, {protagonista} estava {acao_inicial}, até que, de repente, {evento}.
+    Imediatamente, {protagonista} {reacao}, e então, {desfecho}.
+    Felizmente, {final_feliz}. Fim.
+    """
+    
+    print(historia)
 
-local = input("Agora, diga onde ocorre sua historia(Ex: Casa): ")
-
-razao = input("Agora, diga o que o prota estava fazendo no local(Ex: Andando): ")
-
-ato1 = input("Agora, diga um evento inesperado que ocorreu(Ex: Ela se melou): ")
-
-acao = input("Diga o que o protagonista fez(Ex: Ela correu ate o local): ")
-
-ato2 = input("Agora, diga o que aconteceu logo apos isso(Ex: Ele continuou andando): ")
-
-fim = input("Por fim, finalize a historia com um final feliz(Ex: Ela conseguiu um 10): ")
-
-print ("---------------------------------------------------------")
-
-print ("Aqui esta sua historia:")
-
-print("Era uma vez, em", local,", uma pessoa chamada", prota,".")
-
-print ("Certo dia,", prota,"estava", razao,", ate que, de repente,", ato1,".")
-
-print ("Imediatamente,", acao,", e entao,", ato2,".")
-
-print ("Felizmente,", fim,", Fim.")
+if __name__ == "__main__":
+    criar_historia()
